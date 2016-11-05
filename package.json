@@ -1,0 +1,19 @@
+{
+  "name": "groupproject2",
+  "version": "1.0.0",
+  "description": "Connecting ASD with services",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amr08/GroupProject2.git"
+  },
+  "author": "JF, CK, RO, AR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amr08/GroupProject2/issues"
+  },
+  "homepage": "https://github.com/amr08/GroupProject2#readme"
+}
