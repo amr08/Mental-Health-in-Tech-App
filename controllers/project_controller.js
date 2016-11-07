@@ -23,7 +23,7 @@
   });
 
 
-//creates new burger
+//creates new post
   router.post("/create", function(req,res) {
 
     // Burgers.create({
@@ -36,7 +36,7 @@
     //   })   
   });
 
-//moved burgers to out of
+
  router.put('/update/:id', function (req, res) {
 
   // Burgers.update(
