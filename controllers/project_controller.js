@@ -25,6 +25,7 @@
 
 //creates new post
   router.post("/create", function(req,res) {
+   //res.render("new.ejs");  for forms
 
     // Burgers.create({
     //   burger_name: req.body.burger_name,
