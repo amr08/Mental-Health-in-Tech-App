@@ -1,3 +1,4 @@
+// Andrea
 
 $(document).ready(function() {
 
@@ -13,3 +14,8 @@ $(document).ready(function() {
 	
 });
 
+// Ryan
+
+// Jay
+
+// Cherish
