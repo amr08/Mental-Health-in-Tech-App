@@ -22,6 +22,15 @@
         
   });
 
+//Route for countries/states
+
+  router.get("/:country", function(req,res){
+    var zip = req.params.zip;
+
+    res.render("country");
+        
+  });
+
 
 //creates new post
   router.post("/create", function(req,res) {
