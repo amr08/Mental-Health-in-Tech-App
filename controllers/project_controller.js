@@ -1,29 +1,30 @@
   var express = require('express');
   var router = express.Router();
-  // var Burgers = require('../models')["Burgers"];
+  // var Data = require('../models')["Data"];
 
   router.get('/', function (req, res) {
+
+    res.redirect("landing");
+  });
+
+
+ router.get('/landing', function (req, res) {
+    
     res.render("landing");
   });
 
 
+//Route for form (Andrea working on this for now)
+  router.get("/userform", function(req,res){
 
-//creating routes
- 
 
-  router.get("/userData", function(req,res){
-    var userData = [
-      {name: "Creek", image: "http://cdn.thepondguy.com/images/homepage/pond-lake-promo.jpg"},
-      {name: "Mountain View", image: "http://pop.h-cdn.co/assets/cm/15/05/54c83083b00c9_-_pmx0606pond006_large.jpg"},
-      {name: "Pond", image: "http://openwalls.com/image/264/small_river_1920x1200.jpg"}
-      
-    ]
-    res.render("userData", {userData: userData});
+     res.render("userform");
         
   });
+//
+
 
 //Route for countries/states
-
   router.get("/:country", function(req,res){
     var zip = req.params.zip;
 
@@ -32,11 +33,13 @@
   });
 
 
+
+
 //creates new post
   router.post("/create", function(req,res) {
    //res.render("new.ejs");  for forms
 
-    // Burgers.create({
+    // Data.create({
     //   burger_name: req.body.burger_name,
     //   devoured: req.body.devoured
     // })
@@ -49,7 +52,7 @@
 
  router.put('/update/:id', function (req, res) {
 
-  // Burgers.update(
+  // //FOR UPDATING BOOLEANSData.update(
   //   {
   //     devoured: req.body.devoured
   //   },
@@ -61,5 +64,6 @@
   //       res.redirect('/');
   //     })
   });
+
     
   module.exports = router;

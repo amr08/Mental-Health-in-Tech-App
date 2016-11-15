@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     gender: DataTypes.STRING,
     country: DataTypes.STRING,
     state: DataTypes.STRING,
-    self_employed: DataTypes.STRONG,
+    self_employed: DataTypes.STRING,
     family_history: DataTypes.BOOLEAN,
     treatment: DataTypes.BOOLEAN,
     work_interfere: DataTypes.STRING,
