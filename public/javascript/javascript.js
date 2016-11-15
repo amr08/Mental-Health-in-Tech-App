@@ -217,6 +217,7 @@ $(document).ready(function() {
           		}]
       		} 
       	}, onSuccess: function(event){
+      		getVal();
 			$(".modal").modal('show');
 			$('form').transition('scale');
 	      	event.preventDefault();
@@ -224,10 +225,19 @@ $(document).ready(function() {
     
     });
 
+	function getVal(){
+		var age = $("#age").val();
+		var gender = $("#gender").val();
+
+		console.log(age)
+		console.log(gender)
+	}
+
 	$("#success").on("click", function(){
 		$('#successNote').transition('fade');
 		$('#successNote').transition('scale');
 	})
+
 
 });
 

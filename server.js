@@ -1,9 +1,17 @@
   var express = require("express");
   var bodyParser = require('body-parser');
   var methodOverride = require('method-override');
+  var models = require("./models");
+  var path = require('path');
+
+
 
   var PORT = process.env.PORT || 7000;
 
+
+  var project_controller = require('./controllers/project_controller');
+  var datapage_controller = require('./controllers/datapage_controller');
+  var forms_controller = require('./controllers/forms_controller');
 
   var app = express();
 
@@ -18,20 +26,21 @@
   app.use(methodOverride('_method'));
 
 
-  // var sequelizeConnection = models.sequelize;
+  var sequelizeConnection = models.sequelize;
 
-  // sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
+  sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
 
-// //syncing tabels
-//  .then(function(){
+//syncing tabels
+ .then(function(){
 
-//     return sequelizeConnection.sync({force:true})
+    return sequelizeConnection.sync({force:true})
 
-//   })
+  })
 
 
-var routes = require('./controllers/project_controller.js');
-  app.use('/', routes);
+  app.use('/', project_controller);
+  app.use('/country', datapage_controller);
+  app.use('/userform', forms_controller);
 
   app.listen(PORT, function(){
     console.log('App listening on PORT ' + PORT);
