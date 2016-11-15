@@ -41,7 +41,7 @@
           <div class="two fields">
             <div class="field">
               <label>State</label>
-              <select class="ui fluid dropdown">
+              <select class="ui fluid dropdown" id="state">
                 <option value="">State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -398,8 +398,8 @@
       
         <div class="field">
           <label>Has your mental health ever interfered with your job performance</label>
-          <div class="ui selection dropdown" id="work_history">
-            <input type="hidden" name="work_history">
+          <div class="ui selection dropdown" id="work_interfere">
+            <input type="hidden" name="work_interfere">
               <i class="dropdown icon"></i>
               <div class="default text">Select</div>
                 <div class="menu">
@@ -469,7 +469,7 @@
               </div>
           </div>
        
-          <div class="ui button" id="submit" tabindex="0">Submit</div>
+          <div class="ui submit button" id="submit" tabindex="0">Submit</div>
           <div class="ui error message"></div>
 
         </div>

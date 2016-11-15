@@ -16,10 +16,12 @@ $(document).ready(function() {
 	$("#self_employed").dropdown();
 	$("#family_history").dropdown();
 	$("#treatment").dropdown();
-	$("#work_history").dropdown();
+	$("#work_interfere").dropdown();
 	$("#no_employees").dropdown();
 	$("#remote_work").dropdown();
 	$("#tech_company").dropdown();
+	$("#benefits").dropdown();
+	$("#care_options").dropdown();
 	$("#wellness_program").dropdown();
 	$("#seek_help").dropdown();
 	$("#leave").dropdown();
@@ -35,87 +37,196 @@ $(document).ready(function() {
 //form validation
 
 	$("form").form({
+		inline: true,
 	    fields: {
-	      age: {
-	        identifier: "age",
-	        rules: [
-	          {
-	            type   : "empty",
-	            prompt : "Please enter your age"
-	          }
-	        ]
-	      }
-	  	},
-	      	onSuccess: function(event){
-	      		event.preventDefault();
-	      		$(".modal").modal('show');
-	      		
-      		alert("works");
+	    	age: {
+	    		identifier: "age",
+	        	rules: [{
+	            	type   : "empty",
+	            	prompt : "Please enter your age"
+	          	}]
+	      	},
 
-      		}
-     
-      // skills: {
-      //   identifier: 'skills',
-      //   rules: [
-      //     {
-      //       type   : 'minCount[2]',
-      //       prompt : 'Please select at least two skills'
-      //     }
-      //   ]
-      // },
-      // gender: {
-      //   identifier: 'gender',
-      //   rules: [
-      //     {
-      //       type   : 'empty',
-      //       prompt : 'Please select a gender'
-      //     }
-      //   ]
-      // },
-      // username: {
-      //   identifier: 'username',
-      //   rules: [
-      //     {
-      //       type   : 'empty',
-      //       prompt : 'Please enter a username'
-      //     }
-      //   ]
-      // },
-      // password: {
-      //   identifier: 'password',
-      //   rules: [
-      //     {
-      //       type   : 'empty',
-      //       prompt : 'Please enter a password'
-      //     },
-      //     {
-      //       type   : 'minLength[6]',
-      //       prompt : 'Your password must be at least {ruleValue} characters'
-      //     }
-      //   ]
-      // },
-      // terms: {
-      //   identifier: 'terms',
-      //   rules: [
-      //     {
-      //       type   : 'checked',
-      //       prompt : 'You must agree to the terms and conditions'
-      //     }
-      //   ]
-      // }
+	      	gender: {
+	      		identifier: "gender",
+	      		rules: [{
+	      			type: "empty",
+	      			prompt : "Please choose a gender"
+	      		}]
+	      	},
+	      	country: {
+       			identifier: 'country',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please select a country'
+          		}]
+      		},
+	      	state: {
+       			identifier: 'state',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please choose a state'
+          		}]
+      		},
+      		treatment: {
+       			identifier: 'treatment',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		
+      		self_employed: {
+       			identifier: 'self_employed',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		family_history: {
+       			identifier: 'family_history',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		work_interfere: {
+       			identifier: 'work_interfere',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		no_employees: {
+       			identifier: 'no_employees',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		remote_work: {
+       			identifier: 'remote_work',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		tech_company: {
+       			identifier: 'tech_company',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		care_options: {
+       			identifier: 'care_options',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		benefits: {
+       			identifier: 'benefits',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		wellness_program: {
+       			identifier: 'wellness_program',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		seek_help: {
+       			identifier: 'seek_help',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		anonymity: {
+       			identifier: 'anonymity',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		leave: {
+       			identifier: 'leave',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		mental_health_consequence: {
+       			identifier: 'mental_health_consequence',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		phys_health_consequence: {
+       			identifier: 'phys_health_consequence',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		coworkers: {
+       			identifier: 'coworkers',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		supervisor: {
+       			identifier: 'supervisor',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		mental_health_interview: {
+       			identifier: 'mental_health_interview',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		phys_health_interview: {
+       			identifier: 'phys_health_interview',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		mental_vs_physical: {
+       			identifier: 'mental_vs_physical',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
+      		obs_consequence: {
+       			identifier: 'obs_consequence',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		} 
+      	}, onSuccess: function(event){
+			$(".modal").modal('show');
+			$('form').transition('scale');
+	      	event.preventDefault();
+      	}	
+    
     });
-
-//submit modal JS
-	// $('#submit').on("click",function() {
-	// 	$(".modal").modal('show');
-	// 	$('form').transition('scale');
-
-	// });
 
 	$("#success").on("click", function(){
 		$('#successNote').transition('fade');
 		$('#successNote').transition('scale');
-
 	})
 
 });
