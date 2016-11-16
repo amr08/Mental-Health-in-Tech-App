@@ -23,6 +23,7 @@ $(document).ready(function() {
 	$("#care_options").dropdown();
 	$("#wellness_program").dropdown();
 	$("#seek_help").dropdown();
+	$("#anonymity").dropdown();
 	$("#leave").dropdown();
 	$("#mental_health_consequence").dropdown();
 	$("#phys_health_consequence").dropdown();
@@ -215,11 +216,11 @@ $(document).ready(function() {
         //     		prompt : 'Please make a selection'
         //   		}]
       		// } 
-      	}, onSuccess: function(event){
-      		getVal();
+      	}, onSuccess: function(){
+      		// getVal();
 			$(".modal").modal('show');
-			$('form').transition('scale');
-	      	event.preventDefault();
+			// $('form').transition('scale');
+	      	// event.preventDefault();
       	}	
     
     });
@@ -235,10 +236,10 @@ $(document).ready(function() {
 		console.log(self_employed)
 	}
 
-	$("#success").on("click", function(){
-		$('#successNote').transition('fade');
-		$('#successNote').transition('scale');
-	})
+	// $("#success").on("click", function(){
+	// 	$('#successNote').transition('fade');
+	// 	$('#successNote').transition('scale');
+	// })
 
 
 });

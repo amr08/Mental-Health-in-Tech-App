@@ -13,7 +13,7 @@
     </div>
  -->
 
-      <form action="userform/new" method="POST" class="ui form" id="fValidate">
+      <form action="/userform" method="POST" class="ui form" id="fValidate">
         <h4 class="ui dividing header">Demographics</h4>
 
           <div class="field">
@@ -25,18 +25,20 @@
       
               <div class="field">
                 <label>Gender</label>
-                <div class="ui selection dropdown">
-                  <input type="hidden">
+                <div class="ui selection dropdown" id="gender">
+                  <input type="hidden" name="gender">
                   <i class="dropdown icon"></i>
                     <div class="default text">Gender</div>
-                      <select class="menu" name="gender" id="gender">
-                        <option class="item" value="Male">Male</option>
-                        <option class="item" value="Female">Female</option>
-                      </select>
+                      <div class="menu">
+                        <div class="item" data-value="Male">Male</div>
+                        <div class="item" data-value="Female">Female</div>
+                      </div>
                     </div>
                 </div>
               </div>
           </div>
+
+
 
           <div class="two fields">
             <div class="field">
@@ -295,7 +297,7 @@
         <div class="field">
 
           <label>Have you experienced any negative consequences (personal or professional) as a result of your mental health condition</label>
-          <div class="ui selection dropdown" id="mental_health_consequences">
+          <div class="ui selection dropdown" id="mental_health_consequence">
             <input type="hidden" name="mental_health_consequences">
               <i class="dropdown icon"></i>
               <div class="default text">Select</div>
@@ -310,7 +312,7 @@
            <div class="field">
 
           <label>Have you experienced any negative physicial consequences (personal or professional) as a result of your mental health condition?</label>
-          <div class="ui selection dropdown" id="physicial_health_consequences">
+          <div class="ui selection dropdown" id="physicial_health_consequence">
             <input type="hidden" name="physicial_health_consequences">
               <i class="dropdown icon"></i>
               <div class="default text">Select</div>
