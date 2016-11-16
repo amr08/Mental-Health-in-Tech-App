@@ -6,12 +6,12 @@ module.exports = function(sequelize, DataTypes) {
     country: DataTypes.STRING,
     state: DataTypes.STRING,
     self_employed: DataTypes.STRING,
-    family_history: DataTypes.BOOLEAN,
-    treatment: DataTypes.BOOLEAN,
+    family_history: DataTypes.STRING,
+    treatment: DataTypes.STRING,
     work_interfere: DataTypes.STRING,
     no_employees: DataTypes.STRING,
-    remote_work: DataTypes.BOOLEAN,
-    tech_company: DataTypes.BOOLEAN,
+    remote_work: DataTypes.STRING,
+    tech_company: DataTypes.STRING,
     benefits: DataTypes.STRING,
     care_options: DataTypes.STRING,
     wellness_program: DataTypes.STRING,
@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
     mental_health_interview: DataTypes.STRING,
     phys_health_interview: DataTypes.STRING,
     mental_vs_physical: DataTypes.STRING,
-    obs_consequence: DataTypes.BOOLEAN
+    obs_consequence: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
