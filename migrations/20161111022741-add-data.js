@@ -1,11 +1,11 @@
 'use strict';
 
 var models = require("../models");
-var seeders = require("seeders");
+var csvdata = require("csvdata");
 
 module.exports = {
     up: function (queryInterface, Sequelize) {
-        return seeders.load("./mental_health.csv")
+        return csvdata.load("./seeders/mental_health.csv")
         .then(function(data) {
             return models.Data.bulkCreate(data);
         })

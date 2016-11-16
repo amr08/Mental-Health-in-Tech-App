@@ -21,13 +21,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       self_employed: {
-        type: Sequelize.STRONG
+        type: Sequelize.STRING
       },
       family_history: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       },
       treatment: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       },
       work_interfere: {
         type: Sequelize.STRING
@@ -36,10 +36,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       remote_work: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       },
       tech_company: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       },
       benefits: {
         type: Sequelize.STRING
@@ -81,7 +81,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       obs_consequence: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
