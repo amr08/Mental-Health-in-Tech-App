@@ -3,7 +3,10 @@
    var Data = require('../models')["Data"];
    var router = express.Router();
 
-
+ router.get("/", function(req,res){
+     res.redirect("country");
+        
+  });
 
 //Route for countries/states
 

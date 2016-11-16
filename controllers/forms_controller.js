@@ -6,21 +6,35 @@
 
    //Route for form (Andrea working on this for now)
   router.get("/", function(req,res){
+     res.redirect("/userform");
+        
+  });
+
+  router.get("/new", function(req,res){
+
      res.render("new");
         
   });
 
-  router.post("/", function(req,res) {
-    res.send("I hit posts")
-  });
+
+  // router.post("/userform/new", function(req,res) {
+  //   res.send("I hit posts")
+  //   var age = req.body.age;
+  //   var gender = req.body.gender;
+  //   var state = req.body.state;
+  //   var self_employed = req.body.self_employed;
+  //   console.log(age);
+  //   console.log(gender);
+  //   console.log(state);
+  //   console.log(self_employed);
+
+  //    // .then(function() {
+  //       res.redirect('/');
+  //     // })   
+  //   // var newPost = {age: age, gender: gender}
+  // });
 
 
-// router.get("/new", function(req,res){
-
-
-//      res.render("new");
-        
-//   });
 
 
 
