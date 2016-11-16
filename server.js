@@ -38,7 +38,7 @@
 
 
   app.use('/', project_controller);
-  app.use('/', datapage_controller);
+  app.use('/state', datapage_controller);
   app.use('/userform', forms_controller);
 
   app.listen(PORT, function(){
