@@ -61,6 +61,19 @@ body {
 
 /* Andrea */
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*CSS not translating into JavaScript file
+/*#successNote {
+  background-color: blue;
+}*/
+
 
 /* Jay */
 
