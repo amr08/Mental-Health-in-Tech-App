@@ -4,10 +4,7 @@
   var models = require("./models");
   var path = require('path');
 
-
-
   var PORT = process.env.PORT || 7000;
-
 
   var project_controller = require('./controllers/project_controller');
   var datapage_controller = require('./controllers/datapage_controller');
@@ -24,7 +21,6 @@
 
   app.use(methodOverride('_method'));
 
-
   var sequelizeConnection = models.sequelize;
 
   sequelizeConnection.query('SET FOREIGN_KEY_CHECKS = 0')
@@ -35,7 +31,6 @@
     return sequelizeConnection.sync({force:true})
 
   })
-
 
   app.use('/', project_controller);
   app.use('/', datapage_controller);

@@ -1,21 +1,11 @@
 
-   var express = require('express');
-   var Data = require('../models')["Data"];
-   var router = express.Router();
-
-
-   //Route for form (Andrea working on this for now)
-  // router.get("/", function(req,res){
-  //    res.redirect("/new");
-        
-  // });
+  var express = require('express');
+  var Data = require('../models')["Data"];
+  var router = express.Router();
 
   router.get("/new", function(req,res){
-
-     res.render("new");
-        
+     res.render("new");      
   });
-
 
   router.post("/", function(req,res) {
 
@@ -25,7 +15,7 @@
     // tech_company
     // obs_consequence
 
-    
+
     // Data.create(req.body.data, function(err, test) {
     //   if(err){
     //     res.render("new");
@@ -33,7 +23,6 @@
     //     res.redirect("/");
     //   }
     // });
-    // res.send("I hit posts")
     var age = req.body.age;
     var gender = req.body.gender;
     var state = req.body.state;
@@ -84,17 +73,7 @@
     console.log("mental_vs_physical: " + mental_vs_physical)
     console.log("obs_consequence: " + obs_consequence)
  
-
-     // .then(function() {
-        // res.redirect('/new');
-      // })   
-    // var newPost = {age: age, gender: gender}
   });
-
-
-
-
-
 
 //creates new post
  //  router.post("/create", function(req,res) {
