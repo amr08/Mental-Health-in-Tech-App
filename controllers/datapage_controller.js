@@ -14,9 +14,9 @@
  	Data.find({}, function(err, data) {
  		if(err){
  			console.log("ERROR!");
- 		} else
+ 		} else {
  		res.render("country",{data: data});
-
+		}
  	});
     // var zip = req.params.zip;
 
