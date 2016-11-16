@@ -37,7 +37,7 @@ $(document).ready(function() {
 //form validation
 
 	$("form").form({
-		inline: true,
+		// inline: true,
 	    fields: {
 	    	age: {
 	    		identifier: "age",

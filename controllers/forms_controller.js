@@ -18,6 +18,14 @@
 
 
   router.post("/", function(req,res) {
+
+    //BOOLEANS ARE family history
+    // treatment
+    // remote_work
+    // tech_company
+    // obs_consequence
+
+    
     // Data.create(req.body.data, function(err, test) {
     //   if(err){
     //     res.render("new");
