@@ -10,13 +10,15 @@
 
 //Route for countries/states
 
+
  router.get("/search", function(req,res){
+
  	Data.find({}, function(err, data) {
  		if(err){
  			console.log("ERROR!");
- 		} else
+ 		} else {
  		res.render("country",{data: data});
-
+		}
  	});
     // var zip = req.params.zip;
      res.render("country");
