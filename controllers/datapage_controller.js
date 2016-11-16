@@ -10,7 +10,9 @@
 
 //Route for countries/states
 
- router.get("/:search", function(req,res){
+
+ router.get("/search", function(req,res){
+
  	Data.find({}, function(err, data) {
  		if(err){
  			console.log("ERROR!");
@@ -19,7 +21,7 @@
 		}
  	});
     // var zip = req.params.zip;
-
+     res.render("country");
   
   });
 

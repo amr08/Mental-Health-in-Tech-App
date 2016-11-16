@@ -2,13 +2,14 @@
 
 $(document).ready(function() {
 
+	$.stellar();
+
 //links for headers
 	$("a.item").on("click", function() {
 		$(".item").removeClass("active");
 		$(this).addClass("active");
 	});
 
-	// $("#successNote").addClass('hide');
 
 //form JS
 	$("#gender").dropdown();
@@ -23,6 +24,7 @@ $(document).ready(function() {
 	$("#care_options").dropdown();
 	$("#wellness_program").dropdown();
 	$("#seek_help").dropdown();
+	$("#anonymity").dropdown();
 	$("#leave").dropdown();
 	$("#mental_health_consequence").dropdown();
 	$("#phys_health_consequence").dropdown();
@@ -36,7 +38,7 @@ $(document).ready(function() {
 //form validation
 
 	$("form").form({
-		inline: true,
+		// inline: true,
 	    fields: {
 	    	age: {
 	    		identifier: "age",
@@ -44,44 +46,44 @@ $(document).ready(function() {
 	            	type   : "empty",
 	            	prompt : "Please enter your age"
 	          	}]
-	      	}
+	      	},
 
-	      	// gender: {
-	      	// 	identifier: "gender",
-	      	// 	rules: [{
-	      	// 		type: "empty",
-	      	// 		prompt : "Please choose a gender"
-	      	// 	}]
-	      	// },
-	      	// country: {
-       	// 		identifier: 'country',
-        // 		rules: [{
-        //     		type   : 'empty',
-        //     		prompt : 'Please select a country'
-        //   		}]
-      		// },
-	      	// state: {
-       	// 		identifier: 'state',
-        // 		rules: [{
-        //     		type   : 'empty',
-        //     		prompt : 'Please choose a state'
-        //   		}]
-      		// },
-      		// treatment: {
-       	// 		identifier: 'treatment',
-        // 		rules: [{
-        //     		type   : 'empty',
-        //     		prompt : 'Please make a selection'
-        //   		}]
-      		// },
+	      	gender: {
+	      		identifier: "gender",
+	      		rules: [{
+	      			type: "empty",
+	      			prompt : "Please choose a gender"
+	      		}]
+	      	},
+	      	country: {
+       			identifier: 'country',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please select a country'
+          		}]
+      		},
+	      	state: {
+       			identifier: 'state',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please choose a state'
+          		}]
+      		},
+      		treatment: {
+       			identifier: 'treatment',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		},
       		
-      		// self_employed: {
-       	// 		identifier: 'self_employed',
-        // 		rules: [{
-        //     		type   : 'empty',
-        //     		prompt : 'Please make a selection'
-        //   		}]
-      		// },
+      		self_employed: {
+       			identifier: 'self_employed',
+        		rules: [{
+            		type   : 'empty',
+            		prompt : 'Please make a selection'
+          		}]
+      		}
       		// family_history: {
        	// 		identifier: 'family_history',
         // 		rules: [{
@@ -215,31 +217,15 @@ $(document).ready(function() {
         //     		prompt : 'Please make a selection'
         //   		}]
       		// } 
-      	}, onSuccess: function(event){
-      		getVal();
-			$(".modal").modal('show');
-			$('form').transition('scale');
-	      	event.preventDefault();
-      	}	
-    
-    });
-
-	function getVal(){
-
-	   var state = $("#state").dropdown("get text");
-	   var gender = $("#gender").dropdown("get text");
-	   var self_employed = $("#self_employed").dropdown("get text");
-
-		console.log(gender)
-		console.log(state)
-		console.log(self_employed)
-	}
+      	}, onSuccess: function(){
+					$(".modal").modal('show');
+      		}	
+  });
 
 	$("#success").on("click", function(){
-		$('#successNote').transition('fade');
-		$('#successNote').transition('scale');
-	})
-
+		$("form").addClass("hide");
+		$('#completed').text('Form successfully submitted!');
+	});
 
 });
 
