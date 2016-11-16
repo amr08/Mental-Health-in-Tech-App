@@ -1,8 +1,8 @@
 <% include ./partials/header %>
 
 
-
-  <div class="ui raised very padded text container segment">
+<div id="wrapper">
+  <div class="ui raised very padded text container inverted segment" id="opacity">
     <h1 class="ui header">Mental Health in Tech Survey</h1>
     <br>
 
@@ -13,8 +13,8 @@
     </div>
  -->
 
-      <form action="/userform" method="POST" class="ui form" id="fValidate">
-        <h4 class="ui dividing header">Demographics</h4>
+      <form action="/userform" method="POST" class="ui inverted form" >
+        <h3 class="ui dividing header color">Demographics</h3>
 
           <div class="field">
             <div class="two fields">
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <h4 class="ui dividing header">History</h4>
+        <h3 class="ui dividing header">History</h3>
    
         <div class="field">
         
@@ -450,6 +450,6 @@
         </div>
       </div>
     </div>
-
+</div>
 
 <% include ./partials/footer %>

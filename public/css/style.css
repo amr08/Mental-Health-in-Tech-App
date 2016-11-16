@@ -60,6 +60,10 @@ body {
 }
 
 /* Andrea */
+body{ 
+  background-color: black
+ }
+
 
 .hide {
   display: none;
@@ -69,7 +73,17 @@ body {
   display: block;
 }
 
-/*CSS not translating into JavaScript file
+#wrapper {
+  background-image: url("https://static1.squarespace.com/static/53974e3ae4b0039937edb698/t/539b5f26e4b0a0b8fe855746/1402691369157/macro+background.png?format=1500w");
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+#opacity {
+  background-color: rgba(100,100,100, .4)
+}
+
+
 /*#successNote {
   background-color: blue;
 }*/
