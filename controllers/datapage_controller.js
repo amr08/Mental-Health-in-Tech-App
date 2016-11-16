@@ -3,18 +3,24 @@
    var Data = require('../models')["Data"];
    var router = express.Router();
 
- router.get("/", function(req,res){
-     res.redirect("country");
+ // router.get("/", function(req,res){
+ //     res.redirect("country");
         
-  });
+ //  });
 
 //Route for countries/states
 
  router.get("/:country", function(req,res){
-    var zip = req.params.zip;
+ 	Data.find({}, function(err, data) {
+ 		if(err){
+ 			console.log("ERROR!");
+ 		} else
+ 		res.render("country",{data: data});
 
-    res.render("country");
-        
+ 	});
+    // var zip = req.params.zip;
+
+  
   });
 
 
