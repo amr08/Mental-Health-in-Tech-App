@@ -4,7 +4,7 @@ var router = express.Router();
 
 //Route for countries/states
 
-router.get("/state/:state", function(req,res){
+router.get("/:state", function(req,res){
   var state = req.params.state;
 
 	Data.find({where: {id: state}})
