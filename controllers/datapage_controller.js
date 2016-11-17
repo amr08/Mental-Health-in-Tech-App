@@ -1,33 +1,19 @@
-
-   var express = require('express');
-   var Data = require('../models')["Data"];
-   var router = express.Router();
-
- // router.get("/", function(req,res){
- //     res.redirect("country");
-        
- //  });
+var express = require('express');
+var Data = require('../models')["Data"];
+var router = express.Router();
 
 //Route for countries/states
 
+router.get("/state/:state", function(req,res){
+  var state = req.params.state;
 
- router.get("/search", function(req,res){
+	Data.find({where: {id: state}})
+  .then(function(result){
+      var hbsObject = { Data: result };
+      console.log(hbsObject);
+      res.render('state', hbsObject);
+    })
 
- 	Data.find({attributes: ['id', 'state','self_employed']})
+});
 
-    .then(function(result){
-        var hbsObject = { Data: result };
-        console.log(hbsObject);
-        res.render('country', hbsObject);
-      })
-
-
-  	});
-    // var zip = req.params.zip;
-     // res.render("country");
-
-  
-
-
-
-   module.exports = router;
+module.exports = router;
