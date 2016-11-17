@@ -43,16 +43,7 @@
     //     obs_consequence: req.body.bs_consequence
     // })
 
-      //   .then(function() {
-      //       res.redirect('/burgers');
-      // })   
-   
-    //   if(err){
-    //     res.render("new");
-    //   } else {
-    //     res.redirect("/");
-    //   }
-    // });
+
     var age = req.body.age;
     var gender = req.body.gender;
     var state = req.body.state;
@@ -111,7 +102,7 @@
 
  //  // //FOR UPDATING BOOLEANSData.update(
  //  //   {
- //  //     devoured: req.body.devoured
+ //  //     treatment: req.body.treatment
  //  //   },
  //  //   {
  //  //     where: { id : req.params.id }
