@@ -32,16 +32,6 @@
 
   })
 
-  // .then(function(){
-
-  //   return models.Data.create(
-  //     {
-  //       state: "FL",
-  //       self_employed: "No",
-  //     } 
-  //   )
-  // })
-
   app.use('/', project_controller);
   app.use('/state', datapage_controller);
   app.use('/userform', forms_controller);
