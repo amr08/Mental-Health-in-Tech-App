@@ -13,17 +13,21 @@
 
  router.get("/search", function(req,res){
 
- 	Data.find({}, function(err, data) {
- 		if(err){
- 			console.log("ERROR!");
- 		} else {
- 		res.render("country",{data: data});
-		}
- 	});
+ 	Data.find({attributes: ['id', 'state','self_employed']})
+
+    .then(function(result){
+        var hbsObject = { Data: result };
+        console.log(hbsObject);
+        res.render('country', hbsObject);
+      })
+
+
+  	});
     // var zip = req.params.zip;
-     res.render("country");
+     // res.render("country");
+
   
-  });
+
 
 
    module.exports = router;

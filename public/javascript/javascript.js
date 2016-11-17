@@ -224,7 +224,7 @@ $(document).ready(function() {
 
 	$("#success").on("click", function(){
 		$("form").addClass("hide");
-		$('#completed').text('Form successfully submitted!');
+		$('#completed').text('Form successfully submitted');
 	});
 
 });
