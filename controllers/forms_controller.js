@@ -16,7 +16,37 @@
     // obs_consequence
 
 
-    // Data.create(req.body.data, function(err, test) {
+    // Data.create({
+    //     age:req.body.age,
+    //     gender: req.body.gender,
+    //     state: req.body.state,
+    //     self_employed: req.body.self_employed,
+    //     family_history: req.body.family_history,
+    //     treatmen: req.body.treatment,
+    //     work_interfere: req.body.work_interfere,
+    //     no_employees: req.body.no_employees,
+    //     remote_work: req.body.remote_work,
+    //     tech_company: req.body.tech_company,
+    //     benefits: req.body.benefits,
+    //     care_options: req.body.care_options,
+    //     wellness_program: req.body.wellness_program,
+    //     seek_help: req.body.seek_help,
+    //     anonymity: req.body.anonymity,
+    //     leave: req.body.leave,
+    //     mental_health_consequence: req.body.mental_health_consequence,
+    //     phys_health_consequence: req.body.phys_health_consequence,
+    //     coworkers: req.body.coworkers,
+    //     supervisor: req.body.supervisor,
+    //     mental_health_interview: req.body.mental_health_interview,
+    //     phys_health_interview: req.body.phys_health_interview,
+    //     mental_vs_physical: req.body.mental_vs_physical,
+    //     obs_consequence: req.body.bs_consequence
+    // })
+
+      //   .then(function() {
+      //       res.redirect('/burgers');
+      // })   
+   
     //   if(err){
     //     res.render("new");
     //   } else {
@@ -75,19 +105,6 @@
  
   });
 
-//creates new post
- //  router.post("/create", function(req,res) {
- //   //res.render("new.ejs");  for forms
-
- //    // Data.create({
- //    //   burger_name: req.body.burger_name,
- //    //   devoured: req.body.devoured
- //    // })
-
- //    //   .then(function() {
- //    //     res.redirect('/');
- //    //   })   
- //  });
 
 
  // router.put('/update/:id', function (req, res) {
