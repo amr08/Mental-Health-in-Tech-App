@@ -15,11 +15,6 @@ body {
   height: 100%;
 }
 
-.content {
-  position: relative;
-  z-index: 2;
-}
-
 .video {
   position: fixed;
   top: 50%; left: 50%;
@@ -33,11 +28,26 @@ body {
 
 .content {
   position: relative;
-  top: 25%;
+  top: 5%;
   z-index: 2;
   margin: 0 auto;
   max-width: 720px;
   text-align: center;
+}
+
+.blurb{
+	position: relative;
+	top: 15%;
+	z-index: 2;
+	margin: 0 auto;
+	max-width: 540px;
+	text-align: center;
+	color: white;
+}
+
+.blurb-text{
+	line-height: 2;
+	font-size: 1.4em;
 }
 
 .title{
@@ -49,7 +59,7 @@ body {
 
 .content_btn {
   position: relative;
-  top: 35%;
+  top: 20%;
   z-index: 2;
   margin: 0 auto;
   width: 500px;
