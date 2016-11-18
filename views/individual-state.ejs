@@ -2,6 +2,21 @@
 
   <div>
     <h4> <%= state%> </h4>
+    <h4> <%= benefits.yes%> </h4>
+  </div>
+
+  <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
+  <div class="stats">
+  	
+  	<div id="benefits">
+  		
+  		<div id="benefits-yes"><%= benefits.yes%></div>
+  		<div id="benefits-no"><%= benefits.no%></div>
+  		<div id="benefits-dontKnow"><%= benefits.dontKnow%></div>
+
+  	</div>
+
   </div>
 
 <% include partials/footer %>

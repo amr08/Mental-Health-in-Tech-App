@@ -4,6 +4,29 @@ $(document).ready(function() {
 
 	$.stellar();
 
+console.log($("#benefits-yes").html());
+
+//map stuff
+
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Yes',    parseInt($("#benefits-yes").html())],
+          ['No',     parseInt($("#benefits-no").html())],
+          ["Don't Know",  parseInt($("#benefits-dontKnow").html())],
+        ]);
+
+        var options = {
+          title: 'Company Offers Benefits',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+
 //links for headers
 	$("a.item").on("click", function() {
 		$(".item").removeClass("active");
