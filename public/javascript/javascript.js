@@ -11,6 +11,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 	});
 
+  // $('html').transition('fade in');
 
 
 //form JS
