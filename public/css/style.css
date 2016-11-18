@@ -172,3 +172,8 @@ body{
 
 
 /* Cherish */
+
+/* Hide stats on state pages */
+div.stats {
+	display: none;
+}
