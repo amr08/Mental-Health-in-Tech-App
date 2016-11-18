@@ -4,9 +4,40 @@ $(document).ready(function() {
 
 	$.stellar();
 
-console.log($("#benefits-yes").html());
 
+
+
+function tooltipHtml(n, d, id){ /* function to create html content string in tooltip div. */
+    return "<h4>"+n+"</h4>"
+
+  }
+
+  
+  var sampleData ={}; /* Sample random data. */ 
+  ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+  "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
+  "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
+  "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
+  "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+    .forEach(function(d,id){ 
+      var low=Math.round(100*Math.random()), 
+        mid=Math.round(100*Math.random()), 
+        high=Math.round(100*Math.random());
+
+      sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
+          avg:Math.round((low+mid+high)/3), color:d3.interpolate("#3fd5db", "#225f85")(low/100)}; 
+    });
+  
+
+  /* draw states on id #statesvg */ 
+  uStates.draw("#statesvg",sampleData, tooltipHtml);
+  
+  d3.select(self.frameElement).style("height", "600px");
 //map stuff
+
+
+
+
 
 google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
@@ -32,6 +63,7 @@ google.charts.load("current", {packages:["corechart"]});
 		$(".item").removeClass("active");
 		$(this).addClass("active");
 	});
+
 
 
 //form JS
