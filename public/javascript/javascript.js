@@ -5,172 +5,6 @@ $(document).ready(function() {
 	$.stellar();
 
 
-
-
-// function tooltipHtml(n, d, id){ /* function to create html content string in tooltip div. */
-//     return "<h4>"+n+"</h4>"
-
-//   }
-
-  
-//   var sampleData ={}; /* Sample random data. */ 
-//   ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-//   "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
-//   "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
-//   "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
-//   "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
-//     .forEach(function(d,id){ 
-//       var low=Math.round(100*Math.random()), 
-//         mid=Math.round(100*Math.random()), 
-//         high=Math.round(100*Math.random());
-
-//       sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
-//           avg:Math.round((low+mid+high)/3), color:d3.interpolate("#3fd5db", "#225f85")(low/100)}; 
-//     });
-  
-
-//   /* draw states on id #statesvg */ 
-//   uStates.draw("#statesvg",sampleData, tooltipHtml);
-  
-//   d3.select(self.frameElement).style("height", "600px");
-// //map stuff
-
-
-// -----------------------------------------------------------------------------
-// BEGIN Google Pie Charts for the state page
-// -----------------------------------------------------------------------------
-
-//Load charts and corechart package
-google.charts.load("current", {packages:["corechart"]});
-
-//Draw all pie charts when Charts is loaded
-google.charts.setOnLoadCallback(chartBenefits);
-google.charts.setOnLoadCallback(chartWellnessProgram);
-google.charts.setOnLoadCallback(chartAnonymity);
-google.charts.setOnLoadCallback(chartLeave);
-google.charts.setOnLoadCallback(chartMentalHealthConsequence);
-google.charts.setOnLoadCallback(chartMentalVSPhysical);
-
-//Benefit chart info
-function chartBenefits() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Yes',    parseInt($("#benefits-yes").html())],
-  ['No',     parseInt($("#benefits-no").html())],
-  ["Don't Know",  parseInt($("#benefits-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Does your employer provide mental health benefits?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-benefits'));
-  chart.draw(data, options);
-}
-
-//Wellness Program chart info
-function chartWellnessProgram() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Yes',    parseInt($("#wellness-program-yes").html())],
-  ['No',     parseInt($("#wellness-program-no").html())],
-  ["Don't Know",  parseInt($("#wellness-program-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Has your employer ever discussed mental health as part of an employee wellness program?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-wellness-program'));
-  chart.draw(data, options);
-}
-
-//Anonymity chart info
-function chartAnonymity() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Yes',    parseInt($("#anonymity-yes").html())],
-  ['No',     parseInt($("#anonymity-no").html())],
-  ["Don't Know",  parseInt($("#anonymity-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-anonymity'));
-  chart.draw(data, options);
-}
-
-//Leave chart info
-function chartLeave() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Very Easy',    parseInt($("#leave-veryEasy").html())],
-  ['Somewhat Easy',     parseInt($("#leave-somewhatEasy").html())],
-  ['Somewhat Difficult',     parseInt($("#leave-somewhatDifficult").html())],
-  ['Very Difficult',     parseInt($("#leave-veryDifficult").html())],
-  ["Don't Know",  parseInt($("#leave-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Is your leave protected if you choose to take advantage of mental health or substance abuse treatment resources?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-leave'));
-  chart.draw(data, options);
-}
-
-
-//Mental-health-consequence chart info
-function chartMentalHealthConsequence() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Yes',    parseInt($("#mental-health-consequence-yes").html())],
-  ['No',     parseInt($("#mental-health-consequence-no").html())],
-  ["Don't Know",  parseInt($("#mental-health-consequence-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Do you think that discussing a mental health issue with your employer would have negative consequences?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-mental-health-consequence'));
-  chart.draw(data, options);
-}
-
-//Mental-vs-physical chart info
-function chartMentalVSPhysical() {
-  var data = google.visualization.arrayToDataTable([
-  ['Response', 'Count'],
-  ['Yes',    parseInt($("#mental-vs-physical-yes").html())],
-  ['No',     parseInt($("#mental-vs-physical-no").html())],
-  ["Don't Know",  parseInt($("#mental-vs-physical-dontKnow").html())],
-]);
-
-var options = {
-  title: 'Do you feel that your employer takes mental health as seriously as physical health?',
-  is3D: true,
-};
-
-var chart = new google.visualization.PieChart(document.getElementById('chart-mental-vs-physical'));
-  chart.draw(data, options);
-}
-
-
-
-// -----------------------------------------------------------------------------
-// END Google Pie Charts for the state page
-// -----------------------------------------------------------------------------
-
-
-
-
 //links for headers
 	$("a.item").on("click", function() {
 		$(".item").removeClass("active");
@@ -404,3 +238,177 @@ var chart = new google.visualization.PieChart(document.getElementById('chart-men
 // Jay
 
 // Cherish
+
+// -----------------------------------------------------------------------------
+// BEGIN Google US Map
+// -----------------------------------------------------------------------------
+
+google.charts.load('upcoming', {'packages':['geochart']});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Country', 'Responses', 'URL'],
+    ['North Carolina', 200, 'http://google.com'],
+    ['New York', 300, 'http://yahoo.com'],
+    ['California', 400, 'http://gmail.com'],
+  ]);
+
+var view = new google.visualization.DataView(data);
+view.setColumns([0, 1]);
+
+  var options = {
+    region: 'US',
+    resolution: 'provinces',
+    legend: 'none',
+    backgroundColor: 'transparent',
+    colorAxis: { colors: ['#ACCCE5', '#1E5799'] }
+  };
+
+  var chart = new google.visualization.GeoChart(document.getElementById('US-map'));
+
+google.visualization.events.addListener(chart, 'select', function () {
+  var selection = chart.getSelection();
+if (selection.length) {
+    var url = data.getValue(selection[0].row, 2);
+    window.location.href = url;
+}
+ });
+
+  chart.draw(view, options);
+}
+// -----------------------------------------------------------------------------
+// END Google US Map
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// BEGIN Google Pie Charts for the state page
+// -----------------------------------------------------------------------------
+
+//Load charts and corechart package
+google.charts.load("current", {packages:["corechart"]});
+
+//Draw all pie charts when Charts is loaded
+google.charts.setOnLoadCallback(chartBenefits);
+google.charts.setOnLoadCallback(chartWellnessProgram);
+google.charts.setOnLoadCallback(chartAnonymity);
+google.charts.setOnLoadCallback(chartLeave);
+google.charts.setOnLoadCallback(chartMentalHealthConsequence);
+google.charts.setOnLoadCallback(chartMentalVSPhysical);
+
+//Benefit chart info
+function chartBenefits() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Yes',    parseInt($("#benefits-yes").html())],
+  ['No',     parseInt($("#benefits-no").html())],
+  ["Don't Know",  parseInt($("#benefits-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Does your employer provide mental health benefits?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-benefits'));
+  chart.draw(data, options);
+}
+
+//Wellness Program chart info
+function chartWellnessProgram() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Yes',    parseInt($("#wellness-program-yes").html())],
+  ['No',     parseInt($("#wellness-program-no").html())],
+  ["Don't Know",  parseInt($("#wellness-program-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Has your employer ever discussed mental health as part of an employee wellness program?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-wellness-program'));
+  chart.draw(data, options);
+}
+
+//Anonymity chart info
+function chartAnonymity() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Yes',    parseInt($("#anonymity-yes").html())],
+  ['No',     parseInt($("#anonymity-no").html())],
+  ["Don't Know",  parseInt($("#anonymity-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment resources?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-anonymity'));
+  chart.draw(data, options);
+}
+
+//Leave chart info
+function chartLeave() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Very Easy',    parseInt($("#leave-veryEasy").html())],
+  ['Somewhat Easy',     parseInt($("#leave-somewhatEasy").html())],
+  ['Somewhat Difficult',     parseInt($("#leave-somewhatDifficult").html())],
+  ['Very Difficult',     parseInt($("#leave-veryDifficult").html())],
+  ["Don't Know",  parseInt($("#leave-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Is your leave protected if you choose to take advantage of mental health or substance abuse treatment resources?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-leave'));
+  chart.draw(data, options);
+}
+
+
+//Mental-health-consequence chart info
+function chartMentalHealthConsequence() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Yes',    parseInt($("#mental-health-consequence-yes").html())],
+  ['No',     parseInt($("#mental-health-consequence-no").html())],
+  ["Don't Know",  parseInt($("#mental-health-consequence-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Do you think that discussing a mental health issue with your employer would have negative consequences?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-mental-health-consequence'));
+  chart.draw(data, options);
+}
+
+//Mental-vs-physical chart info
+function chartMentalVSPhysical() {
+  var data = google.visualization.arrayToDataTable([
+  ['Response', 'Count'],
+  ['Yes',    parseInt($("#mental-vs-physical-yes").html())],
+  ['No',     parseInt($("#mental-vs-physical-no").html())],
+  ["Don't Know",  parseInt($("#mental-vs-physical-dontKnow").html())],
+]);
+
+var options = {
+  title: 'Do you feel that your employer takes mental health as seriously as physical health?',
+  is3D: true,
+};
+
+var chart = new google.visualization.PieChart(document.getElementById('chart-mental-vs-physical'));
+  chart.draw(data, options);
+}
+
+// -----------------------------------------------------------------------------
+// END Google Pie Charts for the state page
+// -----------------------------------------------------------------------------
