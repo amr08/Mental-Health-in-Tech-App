@@ -28,7 +28,7 @@
 //syncing tabels
  .then(function(){
 
-    return sequelizeConnection.sync({force:true})
+    return sequelizeConnection.sync({force:false})
 
   })
 

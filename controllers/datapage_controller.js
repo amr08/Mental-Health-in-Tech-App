@@ -11,14 +11,14 @@ router.get("/", function(req,res){
 
 });
 
-router.get("/:search", function(req,res){
+router.get("/:state", function(req,res){
   var state = req.params.state;
 
-	Data.find({where: {id: state}})
+	Data.findAll()
   .then(function(result){
       var hbsObject = { Data: result };
       console.log(hbsObject);
-      res.render('state', hbsObject);
+      res.render('individual-state', hbsObject);
     })
 
 });
