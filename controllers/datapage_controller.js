@@ -4,6 +4,33 @@ var router = express.Router();
 
 //Route for countries/states
 
+function surveyCalculations(dataset) {
+
+	var data = {
+		state: dataset[0].state,
+		benefits: {
+			yes: 0,
+			no: 0,
+			'dontKnow': 0
+		}
+	}
+
+	for (var i = 0; i < dataset.length; i++) {
+		if (dataset[i].benefits == "Yes") {
+			data.benefits.yes++;
+		}
+		else if (dataset[i].benefits == "No") {
+			data.benefits.no++;
+		}
+		else {
+			data.benefits.dontKnow++;
+		}
+	}
+
+	console.log(data);
+	return data;
+}
+
 
 router.get("/", function(req,res){
 
@@ -14,11 +41,12 @@ router.get("/", function(req,res){
 router.get("/:state", function(req,res){
   var state = req.params.state;
 
-	Data.findAll()
+  Data.findAll({ where: {state:state}})
   .then(function(result){
-      var hbsObject = { Data: result };
-      console.log(hbsObject);
-      res.render('individual-state', hbsObject);
+      // var hbsObject = { Data: result };
+      // console.log(hbsObject);
+      var data = surveyCalculations(result);
+	  res.render('individual-state', data);
     })
 
 });
