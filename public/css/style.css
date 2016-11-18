@@ -1,4 +1,3 @@
-/* Ryan */
 
 html,
 body,
@@ -42,9 +41,9 @@ body {
 }
 
 .title{
-	font-family: 'Cinzel';
-	font-size: 3em;
-	font-weight: bolder;
+	font-family: 'Open Sans';
+	font-size: 50px;
+	letter-spacing: 1.6px;
 }
 
 .content_btn {
@@ -52,26 +51,24 @@ body {
   top: 35%;
   z-index: 2;
   margin: 0 auto;
-  max-width: 200px;
+  width: 500px;
   padding: 20px;
   color: white;
   text-align: center;
-  border: solid 4px white;
+
 }
 
-.btn{
-	font-family: 'Cinzel';
-	font-size: 2em;
-	font-weight: bolder;
-	padding: 20px;
-	color: white;
-	text-decoration: none;
+#btn{
+	padding: 40px;
+	font-size: 20px;
+	font-family: 'Open Sans';
 }
 
 .US{
-	font-family: 'Cinzel';
+	font-family: 'Open Sans';
 	text-align: center;
 	color: white;
+	letter-spacing: 1.6px;
 }
 
 .state{
@@ -167,11 +164,6 @@ body{
   background-color: rgba(100,100,100, .4)
 }
 
-
-/* Jay */
-
-
-/* Cherish */
 
 /* Hide stats on state pages */
 div.stats {
