@@ -250,7 +250,7 @@ function drawRegionsMap() {
 
   var data = google.visualization.arrayToDataTable([
     ['Country', 'Responses', 'URL'],
-    ['North Carolina', 200, 'http://google.com'],
+    ['North Carolina', 200, '/state/NC'],
     ['New York', 300, 'http://yahoo.com'],
     ['California', 400, 'http://gmail.com'],
   ]);
