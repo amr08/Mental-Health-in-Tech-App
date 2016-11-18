@@ -7,15 +7,38 @@
   <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 
   <div class="stats">
-  	
   	<div id="benefits">
-  		
   		<div id="benefits-yes"><%= benefits.yes%></div>
   		<div id="benefits-no"><%= benefits.no%></div>
   		<div id="benefits-dontKnow"><%= benefits.dontKnow%></div>
-
   	</div>
-
+    <div id="wellness_program">
+      <div id="wellness_program-yes"><%= wellness_program.yes%></div>
+      <div id="wellness_program-no"><%= wellness_program.no%></div>
+      <div id="wellness_program-dontKnow"><%= wellness_program.dontKnow%></div>
+    </div>
+    <div id="anonymity">
+      <div id="anonymity-yes"><%= anonymity.yes%></div>
+      <div id="anonymity-no"><%= anonymity.no%></div>
+      <div id="anonymity-dontKnow"><%= anonymity.dontKnow%></div>
+    </div>
+    <div id="leave">
+      <div id="leave-veryEasy"><%= leave.veryEasy%></div>
+      <div id="leave-somewhatEasy"><%= leave.somewhatEasy%></div>
+      <div id="leave-somewhatDifficult"><%= leave.somewhatDifficult%></div>
+      <div id="leave-veryDifficult"><%= leave.veryDifficult%></div>
+      <div id="leave-dontKnow"><%= leave.dontKnow%></div>
+    </div>
+    <div id="mental-health-consequence">
+      <div id="mental-health-consequence-yes"><%= mental-health-consequence.yes%></div>
+      <div id="mental-health-consequence-no"><%= mental-health-consequence.no%></div>
+      <div id="mental-health-consequence-dontKnow"><%= mental-health-consequence.dontKnow%></div>
+    </div>
+    <div id="mental-vs-physical">
+      <div id="mental-vs-physical-yes"><%= mental-vs-physical.yes%></div>
+      <div id="mental-vs-physical-no"><%= mental-vs-physical.no%></div>
+      <div id="mental-vs-physical-dontKnow"><%= mental-vs-physical.dontKnow%></div>
+    </div>
   </div>
 
 <% include partials/footer %>

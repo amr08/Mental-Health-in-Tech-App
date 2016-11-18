@@ -142,8 +142,6 @@ router.get("/:state", function(req,res){
 
   Data.findAll({ where: {state:state}})
   .then(function(result){
-      // var hbsObject = { Data: result };
-      // console.log(hbsObject);
       var calculatedData = surveyCalculations(result);
 	  res.render('individual-state', calculatedData);
     })
