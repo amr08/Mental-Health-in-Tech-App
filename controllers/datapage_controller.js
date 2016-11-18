@@ -14,9 +14,9 @@ router.get("/", function(req,res){
 router.get("/:state", function(req,res){
   var state = req.params.state;
 
-	Data.find({where: {id: state}})
-  .then(function(data){
-      var hbsObject = { Data: data };
+	Data.findAll()
+  .then(function(result){
+      var hbsObject = { Data: result };
       console.log(hbsObject);
       res.render('individual-state', hbsObject);
     })
