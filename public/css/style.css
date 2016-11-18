@@ -52,12 +52,13 @@ body {
 	line-height: 2;
 	font-size: 1.4em;
 	font-family: "Open Sans";
+	letter-spacing: 1px;
 }
 
 .title{
 	font-family: "Open Sans";
 	font-size: 50px;
-	letter-spacing: 1.6px;
+	letter-spacing: 2px;
 	color: white;
 	text-shadow: 5px 5px 15px black;
 }
@@ -78,13 +79,16 @@ body {
 	padding: 40px;
 	font-size: 20px;
 	font-family: 'Open Sans';
+	letter-spacing: 1.6px;
 }
 
-.US{
+#US{
 	font-family: 'Open Sans';
 	text-align: center;
 	color: white;
 	letter-spacing: 1.6px;
+	padding: 20px;
+	font-size: 45px;
 }
 
 .state{
