@@ -177,3 +177,10 @@ body{
 div.stats {
 	display: none;
 }
+
+/* Define height and wide of pie charts on state page */
+.chart {
+	width: 600px;
+	height: 425px;
+	margin: 30px;
+}
