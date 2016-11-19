@@ -1,6 +1,6 @@
 Mental Health in Technology
 
-The purpose of this survey is to measure the prevalence and attitudes of mental health disorders within the field of Technology. With our interactive application, you can browse through the current data by state as well as contribute to the survey database.
+The purpose of this survey is to measure the prevalence and attitudes toward mental health disorders within the field of Technology. With our interactive application, you can browse through the current data by state as well as contribute to the survey database.
 
 
 Technologies used:
@@ -21,7 +21,9 @@ Technologies used:
 
 - Semantic UI
 
-- Google Maps 
+- Google Static Maps 
+
+- Google Fonts
 
 
 
@@ -33,16 +35,15 @@ Getting Started
 Prerequisites:
 
 
-- jQuery: Use CDN - "https://code.jquery.com/jquery-2.2.1.min.js"
+- jQuery- Use CDN: "https://code.jquery.com/jquery-2.2.1.min.js"
 
 - stellar.js: visit http://markdalgleish.com/projects/stellar.js/ and download.
 
 - Semantic UI: visit http://semantic-ui.com/introduction/getting-started.html and download.
 
-- D3: Use CND - "Needs to fill in"
+- Google Static Map- CDN: "https://www.gstatic.com/charts/loader.js"
 
-- Google Map -"Needs to fill in"
-
+- Google Fonts- CDN: "https://fonts.googleapis.com/css?family=Questrial|Play:700|Open Sans"
 
 
 <br>
