@@ -198,10 +198,24 @@ div.stats {
 	margin: 30px;
 }
 
-/* Define height and width of US map */
+/* Styling for US map and state list dropdown */
+#state-dropdown {
+	display: none;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#open-dropdown {
+	text-align: center;
+}
+
 @media (max-width: 620px) {
 	#US-map {
 		display: none;
+	}
+
+	#state-dropdown {
+		display: block;
 	}
 }
 
