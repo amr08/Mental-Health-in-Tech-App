@@ -1,9 +1,9 @@
-Mental Health in Technology
+*Mental Health in Technology*
 
 The purpose of this survey is to measure the prevalence and attitudes toward mental health disorders within the field of Technology. With our interactive application, you can browse through the current data by state as well as contribute to the survey database.
 
 
-Technologies used:
+*Technologies used:*
 
 - Node.js
 
@@ -29,10 +29,10 @@ Technologies used:
 
 
 <br>
-Getting Started
+*Getting Started*
 
 
-Prerequisites:
+*Prerequisites:*
 
 
 - jQuery- Use CDN: "https://code.jquery.com/jquery-2.2.1.min.js"
@@ -49,7 +49,7 @@ Prerequisites:
 <br>
 
 
-Contributors:
+*Contributors:*
 
 
 Andrea Roche 
