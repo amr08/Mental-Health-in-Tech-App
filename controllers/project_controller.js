@@ -13,9 +13,5 @@
     res.render("landing");
   });
 
-router.get("*", function(req,res){
-	res.send("Oops there was an error!")
-});
-
 
   module.exports = router;
