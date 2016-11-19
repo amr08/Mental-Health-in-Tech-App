@@ -293,7 +293,10 @@ function returnResponses() {
 
 
 router.get("/", function(req,res){
-	Data.findAll()
+	Data.findAll({ where: {
+	  	self_employed: 'no',
+	  	tech_company: 'yes'
+	}})
 	.then(function(result) {
 		var responses = stateResponses(result);
 		res.render('state', responses);
