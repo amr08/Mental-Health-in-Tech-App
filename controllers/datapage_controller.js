@@ -113,7 +113,7 @@ function surveyCalculations(dataset) {
 			no: 0,
 			dontKnow: 0
 		}
-	}
+	};
 
 	//Find state name based on initials
 	calculations.stateName = abbrState(calculations.stateInitial, 'name');
@@ -206,11 +206,96 @@ function surveyCalculations(dataset) {
 	return calculations;
 }
 
+function stateResponses(dataset) {
+	var stateList = ['AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','GU','HI','IA','ID', 'IL','IN','KS','KY','LA','MA','MD','ME','MH','MI','MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY', 'OH','OK','OR','PA','PR','PW','RI','SC','SD','TN','TX','UT','VA','VI','VT','WA','WI','WV','WY'];
+
+	var numberOfResponses = {
+	    'AL': 0,
+	    'AK': 0,
+	    'AS': 0,
+	    'AZ': 0,
+	    'AR': 0,
+	    'CA': 0,
+	    'CO': 0,
+	    'CT': 0,
+	    'DE': 0,
+	    'DC': 0,
+	    'FM': 0,
+	    'FL': 0,
+	    'GA': 0,
+	    'GU': 0,
+	    'HI': 0,
+	    'ID': 0,
+	    'IL': 0,
+	    'IN': 0,
+	    'IA': 0,
+	    'KS': 0,
+	    'KY': 0,
+	    'LA': 0,
+	    'ME': 0,
+	    'MH': 0,
+	    'MD': 0,
+	    'MA': 0,
+	    'MI': 0,
+	    'MN': 0,
+	    'MS': 0,
+	    'MO': 0,
+	    'MT': 0,
+	    'NE': 0,
+	    'NV': 0,
+	    'NH': 0,
+	    'NJ': 0,
+	    'NM': 0,
+	    'NY': 0,
+	    'NC': 0,
+	    'ND': 0,
+	    'MP': 0,
+	    'OH': 0,
+	    'OK': 0,
+	    'OR': 0,
+	    'PW': 0,
+	    'PA': 0,
+	    'PR': 0,
+	    'RI': 0,
+	    'SC': 0,
+	    'SD': 0,
+	    'TN': 0,
+	    'TX': 0,
+	    'UT': 0,
+	    'VT': 0,
+	    'VI': 0,
+	    'VA': 0,
+	    'WA': 0,
+	    'WV': 0,
+	    'WI': 0,
+	    'WY': 0
+	};
+
+	for (var i = 0; i < stateList.length; i++) {
+		for (var x = 0; x < dataset.length; x++) {
+			if (dataset[x].state == stateList[i]) {
+				numberOfResponses[stateList[i]]++;
+			}
+		};
+	};
+
+	console.log(numberOfResponses);
+	return numberOfResponses;
+}
+
+function returnResponses() {
+	stateResponses(function() {
+		console.log("Done!")
+	});
+}
+
 
 router.get("/", function(req,res){
-
-  res.render('state');
-
+	Data.findAll()
+	.then(function(result) {
+		var responses = stateResponses(result);
+		res.render('state', responses);
+	});
 });
 
 router.get("/:state", function(req,res){
@@ -224,8 +309,7 @@ router.get("/:state", function(req,res){
   .then(function(result){
       var calculatedData = surveyCalculations(result);
 	  res.render('individual-state', calculatedData);
-    })
-
+    });
 });
 
 module.exports = router;
