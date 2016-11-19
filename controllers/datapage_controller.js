@@ -2,6 +2,8 @@ var express = require('express');
 var Data = require('../models')["Data"];
 var router = express.Router();
 
+var state = '';
+
 //Function to change state initials to state names
 function abbrState(input, to) {
     var states = [
@@ -79,7 +81,7 @@ function abbrState(input, to) {
 function surveyCalculations(dataset) {
 	//Object for calculations
 	var calculations = {
-		stateInitial: dataset[0].state,
+		stateInitial: state,
 		stateName: '',
 		benefits: {
 			yes: 0,
@@ -299,7 +301,7 @@ router.get("/", function(req,res){
 });
 
 router.get("/:state", function(req,res){
-  var state = req.params.state;
+  state = req.params.state;
 
   Data.findAll({ where: {
   	state: state,
