@@ -500,6 +500,8 @@ if($('#state-dropdown').length) {
 if($('.homepage-content').length) {
   console.log('hide');
   $('.ui.inverted.menu').hide();
+  $('#wrapper').css('min-height','initial');
+  $('#wrapper').css('height','100%');
 }
 
 // -----------------------------------------------------------------------------
