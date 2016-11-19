@@ -140,7 +140,11 @@ router.get("/", function(req,res){
 router.get("/:state", function(req,res){
   var state = req.params.state;
 
-  Data.findAll({ where: {state:state}})
+  Data.findAll({ where: {
+  	state: state,
+  	self_employed: 'no',
+  	tech_company: 'yes'
+  }})
   .then(function(result){
       var calculatedData = surveyCalculations(result);
 	  res.render('individual-state', calculatedData);
