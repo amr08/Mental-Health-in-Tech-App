@@ -98,7 +98,7 @@ body {
 	font-size: 45px;
 }
 
-.state{
+/*.state{
 		fill: none;
 		stroke: #a9a9a9;
 		stroke-width: 1;
@@ -148,9 +148,9 @@ body {
 }
 #tooltip tr td:nth-child(2){
 	text-align:center;
-}
+}*/
 
-.state{
+/*.state{
   	transition: box-shadow .5s;
   	transition: transform .5s;
 }   
@@ -164,7 +164,7 @@ body {
 	margin-left: 12%;
 	margin-top: 3%;
 	margin-bottom: 3%;
-}
+}*/
 
 
 .hide {
@@ -202,7 +202,9 @@ div.stats {
 .chart {
 	width: 600px;
 	height: 425px;
-	margin: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /* Styling for US map and state list dropdown */
