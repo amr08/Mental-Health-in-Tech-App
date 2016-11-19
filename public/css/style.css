@@ -18,6 +18,14 @@ body {
 body {
 	background-color: #25272a;
 }
+
+#custom {
+	text-align: center;
+	padding: 20px;
+	font-size: 40px;
+}
+
+
 .video {
   position: fixed;
   top: 50%; left: 50%;
