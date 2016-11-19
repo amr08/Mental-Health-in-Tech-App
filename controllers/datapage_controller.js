@@ -300,6 +300,7 @@ router.get("/", function(req,res){
 	});
 });
 
+
 router.get("/:state", function(req,res){
   state = req.params.state;
 
@@ -313,5 +314,10 @@ router.get("/:state", function(req,res){
 	  res.render('individual-state', calculatedData);
     });
 });
+
+router.get("*", function(req,res){
+	res.send("Oops there was an error!")
+});
+
 
 module.exports = router;

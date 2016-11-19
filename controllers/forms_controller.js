@@ -9,12 +9,6 @@
 
   router.post("/", function(req,res) {
 
-    //BOOLEANS ARE family history
-    // treatment
-    // remote_work
-    // tech_company
-    // obs_consequence
-
 
     Data.create({
         age:req.body.age,
@@ -98,19 +92,9 @@
 
 
 
- // router.put('/update/:id', function (req, res) {
+    router.get("*", function(req,res){
+        res.send("Oops there was an error!")
+    });
 
- //  // //FOR UPDATING BOOLEANSData.update(
- //  //   {
- //  //     treatment: req.body.treatment
- //  //   },
- //  //   {
- //  //     where: { id : req.params.id }
- //  //   })
-
- //  //     .then(function (result) {
- //  //       res.redirect('/');
- //  //     })
- //  });
 
   module.exports = router;
