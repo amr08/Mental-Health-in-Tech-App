@@ -266,7 +266,8 @@ if($('h1#US').length) {
       resolution: 'provinces',
       legend: 'none',
       backgroundColor: 'transparent',
-      colorAxis: { colors: ['#ACCCE5', '#1E5799'] }
+      colorAxis: { colors: ['#ACCCE5', '#1E5799'] },
+      keepAspectRatio: true
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('US-map'));
@@ -293,8 +294,8 @@ if($('h1#US').length) {
 // -----------------------------------------------------------------------------
 
 //If the page is a state page, add the pie charts
-if ($('div#stats').length) {
-
+if ($('div.stats').length) {
+  
   //Load charts and corechart package
   google.charts.load("current", {packages:["corechart"]});
 
@@ -417,6 +418,26 @@ if ($('div#stats').length) {
     chart.draw(data, options);
   }
 }
+
 // -----------------------------------------------------------------------------
 // END Google Pie Charts for the state page
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// BEGIN Dropdown to select state on Selection page
+// -----------------------------------------------------------------------------
+
+if($('#state-dropdown').length) {
+  $('#state-dropdown-states').on('change', function () {
+    var url = $(this).val();
+    if (url) {
+        window.location.href = url;
+    }
+    return false;
+  });
+}
+
+// -----------------------------------------------------------------------------
+// END Dropdown to select state on Selection page
 // -----------------------------------------------------------------------------
