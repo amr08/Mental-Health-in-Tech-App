@@ -381,7 +381,6 @@ if ($('div.stats').length) {
     chart.draw(data, options);
   }
 
-
   //Mental-health-consequence chart info
   function chartMentalHealthConsequence() {
     var data = google.visualization.arrayToDataTable([
@@ -435,6 +434,10 @@ if($('#state-dropdown').length) {
         window.location.href = url;
     }
     return false;
+  });
+
+  $('#open-dropdown a').click(function() {
+    $('#state-dropdown').fadeIn();
   });
 }
 
