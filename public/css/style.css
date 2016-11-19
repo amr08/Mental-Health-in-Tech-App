@@ -189,6 +189,7 @@ body {
   background-size: cover;
   padding: 20px;
   min-height: 100%;
+  color: #fff;
 }
 
 #opacity {
@@ -299,9 +300,6 @@ div.stats {
 	}
 }
 
-.body-content {
-	height: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	color: #fff;
+.center {
+	text-align: center;
 }
