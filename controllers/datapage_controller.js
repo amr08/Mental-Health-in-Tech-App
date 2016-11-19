@@ -293,7 +293,6 @@ function returnResponses() {
 
 router.get("/", function(req,res){
 	Data.findAll({ where: {
-		country: 'United States',
 		self_employed: 'no',
 		tech_company: 'yes'
 	}})
