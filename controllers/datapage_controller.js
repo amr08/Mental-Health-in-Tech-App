@@ -293,6 +293,7 @@ function returnResponses() {
 
 router.get("/", function(req,res){
 	Data.findAll({ where: {
+		country: 'United States',
 		self_employed: 'no',
 		tech_company: 'yes'
 	}})
@@ -328,10 +329,6 @@ router.get("/:state", function(req,res){
 			}
 		});
 	}
-});
-
-router.get("/*", function(req,res){
-	res.send("Oops there was an error!")
 });
 
 

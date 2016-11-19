@@ -1,32 +1,27 @@
 <% include partials/header %>
 
-
 <video class="video" autoplay="autoplay" loop="loop" muted="" width="300" height="150">
   <source src="css/vid/background.mp4" type="video/mp4"/>
 </video>
 
-<div class="content">
+<div class="homepage">
+	<div class="homepage-content">
 
-	<h1 class="title">Mental Health in Technology</h1>
-	<h1 class="title">Survey</h1>
+		<div class="content">
+			<h1 class="title">Mental Health in Technology Survey</h1>
+		</div>
 
+		<div class="blurb">
+			<div class="blurb-text">The purpose of this survey is to measure the prevalence and attitudes toward mental health disorders within the field of Technology. With our interactive application, you can browse through the current data by state as well as contribute to the survey database.
+			</div>
+		</div>
+
+		<div class="content_btn">
+			<a href="/state/" id="btn" class="ui inverted button">See the Data</a>
+			<a href="/userform/new/" id="btn" class="ui inverted button">Take the Survey</a>
+		</div>
+
+	</div>
 </div>
-
-<div class="blurb">
-	
-	<h3 class="blurb-text">The purpose of this survey is to measure the prevalence and attitudes toward mental health disorders within the field of Technology. With our interactive application, you can browse through the current data by state as well as contribute to the survey database.
-	</h3>
-		
-
-
-</div>
-
-<div class="content_btn">
-
-	<a href="/state/"><button id="btn" class="ui inverted button">Get Started</button></a>
-
-</div>
-
-
 
 <% include partials/footer %>
