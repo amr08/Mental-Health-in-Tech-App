@@ -43,7 +43,7 @@ Prerequisites:
 
 - Google Static Map- CDN: "https://www.gstatic.com/charts/loader.js"
 
-- Google Fonts- CDN: "https://fonts.googleapis.com/css?family=Questrial|Play:700|Open Sans"
+- Google Fonts- CDN: "https://fonts.googleapis.com/css?family=Questrial|Play:700|Open+Sans"
 
 
 <br>
