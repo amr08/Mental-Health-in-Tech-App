@@ -278,6 +278,10 @@ div.stats {
   overflow: auto;
 }
 
+select {
+	color: black;
+}
+
 @media (min-width: 651px) and (max-width: 1024px) {
 	.homepage .homepage-content {
 	  width: 80%;
