@@ -341,7 +341,7 @@ if($('h1#US').length) {
 // -----------------------------------------------------------------------------
 
 //If the page is a state page, add the pie charts
-if ($('div.stats').length) {
+if ($('div.state-stats').length) {
   
   //Load charts and corechart package
   google.charts.load("current", {packages:["corechart"]});

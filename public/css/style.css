@@ -202,7 +202,7 @@ body {
 	font-size: 22px
 }
 
-/* Hide stats on state pages */
+/* Hide stats on map and state pages */
 div.stats {
 	display: none;
 }
@@ -235,6 +235,10 @@ div.stats {
 
 	#state-dropdown {
 		display: block;
+	}
+
+	#open-dropdown {
+		display: none;
 	}
 }
 
